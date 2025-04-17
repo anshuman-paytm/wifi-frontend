@@ -12,7 +12,7 @@ const SignupPage = () => {
     e.preventDefault();
     try {
       await axios.post('http://localhost:3000/api/auth/signup', { email, password });
-      navigate('/dashboard');
+      navigate('/login');
     } catch (err) {
       setError('Signup failed. Try again.');
     }
